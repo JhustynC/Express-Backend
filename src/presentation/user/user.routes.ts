@@ -1,9 +1,8 @@
 import { GetUser } from './../../domain/use-cases/user/get-user.use-case';
 import { Router } from "express";
-import { UserDatasourceImp } from "../../infrastructure/datasources/user.datasource.imp";
-import { UserRepositoryImp } from "../../infrastructure/repositories/user.repository.imp";
+import { UserDatasourceImp } from "../../infrastructure/datasources/mongo.datasource.imp";
+import { UserRepositoryImp } from "../../infrastructure/repositories/mongo.repository.imp";
 import { UserController } from "./user.controller";
-
 
 export class UserRoutes {
     static get routes(): Router {
