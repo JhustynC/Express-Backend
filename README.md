@@ -48,13 +48,7 @@ This project is a RESTful API built with Node.js, Express, and TypeScript, using
 
 ## Running the Project
 
-1. **Start the MongoDB database with Docker**
-   ```bash
-   npm run docker:up
-   ```
-   This will start a MongoDB container on port `27018`.
-
-2. **Start the server in development mode**
+1. **Start the server in development mode**
    ```bash
    npm run dev
    ```
@@ -86,4 +80,3 @@ There is also a test endpoint at `/api`.
 - The project uses Argon2 for password hashing.
 - The MongoDB container is initialized with the username and password `root`.
 - You can modify ports and credentials in `docker-compose.yml` and `.env`.
-
