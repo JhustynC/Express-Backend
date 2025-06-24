@@ -41,8 +41,9 @@ npx prisma init
 
 ### 3. Configure the `.env` file
 Create or update the `.env` file in your project root:
+Check .env.template to make your own .env file
 ```
-POSTGRES_URL="postgresql://root:root@localhost:5433/chat_app_db?schema=public&timezone=America/Guayaquil"
+POSTGRES_URL=postgresql://root:root@localhost:5433/chat_app_db?schema=public&timezone=America/Guayaquil
 ```
 
 ### 4. Configure `schema.prisma`
