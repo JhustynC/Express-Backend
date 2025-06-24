@@ -58,7 +58,7 @@ This project is a RESTful API built with Node.js, Express, and TypeScript, using
 
 Once the server is running, you can access the interactive API documentation at:
 
-[http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+[http://localhost:3001/api-docs](http://localhost:3001/api-docs)
 
 From this interface, you can view all available endpoints, test them, and see the expected data models.
 
