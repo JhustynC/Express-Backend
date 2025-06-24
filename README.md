@@ -48,13 +48,7 @@ This project is a RESTful API built with Node.js, Express, and TypeScript, using
 
 ## Running the Project
 
-1. **Start the MongoDB database with Docker**
-   ```bash
-   npm run docker:up
-   ```
-   This will start a MongoDB container on port `27018`.
-
-2. **Start the server in development mode**
+1. **Start the server in development mode**
    ```bash
    npm run dev
    ```
