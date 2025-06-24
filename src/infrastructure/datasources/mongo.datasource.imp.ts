@@ -4,7 +4,7 @@ import { CreateUserDto } from "../../domain/dtos/user/create-user.dto";
 import { UpdateUserDto } from "../../domain/dtos/user/update-user.dto";
 import { UserEntity } from "../../domain/entities/user.entity";
 
-export class UserDatasourceImp implements AbsUserDatasource{
+export class MongoDatasourceImp implements AbsUserDatasource{
     async saveUser(user: CreateUserDto): Promise<UserEntity> {
         const newUser = await UserModel.create(user);
         return UserEntity.fromObject(newUser);

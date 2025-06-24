@@ -1,13 +1,15 @@
 import { GetUser } from './../../domain/use-cases/user/get-user.use-case';
 import { Router } from "express";
-import { UserDatasourceImp } from "../../infrastructure/datasources/mongo.datasource.imp";
+import { MongoDatasourceImp } from "../../infrastructure/datasources/mongo.datasource.imp";
 import { UserRepositoryImp } from "../../infrastructure/repositories/mongo.repository.imp";
 import { UserController } from "./user.controller";
+import { PostgresUserDatasourceImp } from '../../infrastructure/datasources/postgres.datasource.imp';
 
 export class UserRoutes {
     static get routes(): Router {
         const router = Router();
-        const userDatasource = new UserDatasourceImp();
+        // const userDatasource = new MongoDatasourceImp();
+        const userDatasource = new PostgresUserDatasourceImp();
         const userRepository =  new UserRepositoryImp(userDatasource);
         const userController = new UserController(userRepository);
 

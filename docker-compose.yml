@@ -9,7 +9,19 @@ services:
       MONGO_INITDB_DATABASE: chat_app_db
     volumes:
       - mongo_data:/data/db
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: chat_app_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 volumes:
   mongo_data:
+  postgres_data:
 
 
